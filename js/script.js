@@ -1,12 +1,12 @@
 var WA="https://wa.me/628979563274?text=Halo%20Admin%20Gabin!%20Saya%20mau%20tanya%20soal%20menu%20dan%20promo%2C%20ya%20%F0%9F%98%8A";
 var WA_NUMBER="628979563274";
 var FORM="https://forms.gle/5gQNjAwmwG2b2zfR8";
-var FL=[{n:"Es Teler",k:"ES TELER.PNG"},{n:"Es Doger",k:"ES DOGER.PNG"},{n:"Martabak",k:"MARTABAK.PNG"},{n:"Klepon",k:"KLEPON.PNG"},{n:"Jasuke",k:"JASUKE.PNG"}];
+var FL=[{n:"Es Teler",k:"ES TELER.png"},{n:"Es Doger",k:"ES DOGER.png"},{n:"Martabak",k:"MARTABAK.png"},{n:"Klepon",k:"KLEPON.png"},{n:"Jasuke",k:"JASUKE.png"}];
 function src(k){return "img/"+encodeURIComponent(k)}
 function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
 var fl=document.getElementById("flavors");
 FL.forEach(function(f){var d=document.createElement("div");d.className="glass card";
- d.innerHTML='<img src="'+src(f.k)+'" ...';fl.appendChild(d)});
+ d.innerHTML='<img src="'+src(f.k)+'" alt="'+f.n+'"><h3>'+f.n+'</h3><p class="price">Rp 13.000</p><a class="btn sm" target="_blank" rel="noopener" href="'+FORM+'">Pesan</a>';fl.appendChild(d)});
 var rating=0,sw=document.getElementById("stars");
 function drawStars(){sw.innerHTML="";for(var i=1;i<=5;i++){(function(i){var b=document.createElement("button");b.textContent="★";b.setAttribute("aria-label",i+" bintang");if(i<=rating)b.className="on";b.onclick=function(){rating=i;drawStars()};sw.appendChild(b)})(i)}}
 drawStars();
