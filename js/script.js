@@ -6,7 +6,7 @@ function src(k){return "img/"+encodeURIComponent(k)}
 function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
 var fl=document.getElementById("flavors");
 FL.forEach(function(f){var d=document.createElement("div");d.className="glass card";
- d.innerHTML='<img src="'+src(f.k)+'" alt="'+f.n+'"><h3>'+f.n+'</h3><p class="price">Rp 13.000</p><a class="btn sm" target="_blank" rel="noopener" href="'+FORM+'">Pesan</a>';fl.appendChild(d)});
+ d.innerHTML='<img src="'+src(f.k)+'" ...';fl.appendChild(d)});
 var rating=0,sw=document.getElementById("stars");
 function drawStars(){sw.innerHTML="";for(var i=1;i<=5;i++){(function(i){var b=document.createElement("button");b.textContent="★";b.setAttribute("aria-label",i+" bintang");if(i<=rating)b.className="on";b.onclick=function(){rating=i;drawStars()};sw.appendChild(b)})(i)}}
 drawStars();
